@@ -15,7 +15,6 @@ db.createCollection("usuario", {
         nome_perfil: {
           bsonType: "string",
           description: "Perfil de acesso do usuário - obrigatório",
-          enum: ["admin", "editor", "autor", "moderador", "leitor"]
         },
         email: {
           bsonType: "string",
