@@ -1,0 +1,414 @@
+[{
+  "_id": {
+    "$oid": "68b273fcea3ad7c67d90c59a"
+  },
+  "nome": "Arthur Silva",
+  "hash_senha": "a94a8fe5ccb19ba61c4c0873d391e987982fbbd3",
+  "nome_perfil": "admin",
+  "email": "arthur.silva@example.com",
+  "telefone": [
+    "+55 83 98877-1234"
+  ],
+  "conteudo": [
+    {
+      "titulo": "MongoDB Basics",
+      "link": "https://example.com/mongodb",
+      "descricao": "Introdução ao MongoDB",
+      "data_publicacao": {
+        "$date": "2024-05-10T00:00:00.000Z"
+      },
+      "publico_alvo": {
+        "idade": 18,
+        "sexo": "M"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68b274728b1929e44aa45394"
+  },
+  "nome": "Arthur Silva",
+  "hash_senha": "a94a8fe5ccb19ba61c4c0873d391e987982fbbd3",
+  "nome_perfil": "admin",
+  "email": "arthur.silva@example.com",
+  "telefone": [
+    "+55 83 98877-1234"
+  ],
+  "conteudo": [
+    {
+      "titulo": "MongoDB Basics",
+      "link": "https://example.com/mongodb",
+      "descricao": "Introdução ao MongoDB",
+      "data_publicacao": {
+        "$date": "2024-05-10T00:00:00.000Z"
+      },
+      "publico_alvo": {
+        "idade": 18,
+        "sexo": "M"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68b274728b1929e44aa45395"
+  },
+  "nome": "Beatriz Souza",
+  "hash_senha": "5d41402abc4b2a76b9719d911017c592",
+  "nome_perfil": "editor",
+  "email": "bia.souza@example.com",
+  "telefone": [
+    "+55 11 91234-5678"
+  ],
+  "conteudo": [
+    {
+      "titulo": "UX Design",
+      "link": "https://example.com/ux",
+      "descricao": "Noções básicas de UX",
+      "data_publicacao": {
+        "$date": "2024-05-10T00:00:00.000Z"
+      },
+      "publico_alvo": {
+        "sexo": "F"
+      }
+    },
+    {
+      "titulo": "Design Patterns",
+      "link": "https://example.com/patterns",
+      "descricao": "Padrões de projeto em UI",
+      "data_publicacao": {
+        "$date": "2024-05-10T00:00:00.000Z"
+      },
+      "publico_alvo": {
+        "idade": 30
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68b274728b1929e44aa45396"
+  },
+  "nome": "Carlos Almeida",
+  "hash_senha": "098f6bcd4621d373cade4e832627b4f6",
+  "nome_perfil": "autor",
+  "telefone": [
+    "+55 21 97777-2222",
+    "+55 21 93333-1111"
+  ],
+  "conteudo": [
+    {
+      "titulo": "Estatística Básica",
+      "link": "https://example.com/estatistica",
+      "descricao": "Probabilidade e estatística para iniciantes",
+      "data_publicacao": {
+        "$date": "2024-05-10T00:00:00.000Z"
+      },
+      "publico_alvo": {
+        "idade": 25,
+        "sexo": "M"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68b274728b1929e44aa45397"
+  },
+  "nome": "Daniela Castro",
+  "hash_senha": "ad0234829205b9033196ba818f7a872b",
+  "nome_perfil": "moderador",
+  "email": "daniela.castro@example.com",
+  "conteudo": [
+    {
+      "titulo": "Redes de Computadores",
+      "link": "https://example.com/redes",
+      "descricao": "Modelos OSI e TCP/IP",
+      "data_publicacao": {
+        "$date": "2024-05-10T00:00:00.000Z"
+      },
+      "publico_alvo": {
+        "idade": 20
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68b274728b1929e44aa45398"
+  },
+  "nome": "Eduardo Pereira",
+  "hash_senha": "8ad8757baa8564dc136c1e07507f4a98",
+  "nome_perfil": "leitor",
+  "telefone": [
+    "+55 61 95555-4444",
+    "+55 61 97777-8888"
+  ],
+  "conteudo": [
+    {
+      "titulo": "Docker Essentials",
+      "link": "https://example.com/docker",
+      "descricao": "Introdução a containers",
+      "data_publicacao": {
+        "$date": "2024-05-10T00:00:00.000Z"
+      },
+      "publico_alvo": {
+        "sexo": "M"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68b274728b1929e44aa45399"
+  },
+  "nome": "Fernanda Lima",
+  "hash_senha": "c4ca4238a0b923820dcc509a6f75849b",
+  "nome_perfil": "editor",
+  "email": "fernanda.lima@example.com",
+  "conteudo": [
+    {
+      "titulo": "Marketing Digital",
+      "link": "https://example.com/marketing",
+      "descricao": "Conceitos de SEO e SEM",
+      "data_publicacao": {
+        "$date": "2024-05-10T00:00:00.000Z"
+      },
+      "publico_alvo": {
+        "idade": 35,
+        "sexo": "F"
+      }
+    },
+    {
+      "titulo": "Redação Publicitária",
+      "link": "https://example.com/redacao",
+      "descricao": "Escrevendo para campanhas online",
+      "data_publicacao": {
+        "$date": "2024-05-10T00:00:00.000Z"
+      },
+      "publico_alvo": {}
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68b274728b1929e44aa4539a"
+  },
+  "nome": "Gabriel Oliveira",
+  "hash_senha": "45c48cce2e2d7fbdea1afc51c7c6ad26",
+  "nome_perfil": "autor",
+  "conteudo": [
+    {
+      "titulo": "Node.js Avançado",
+      "link": "https://example.com/node",
+      "descricao": "Backend com Express e MongoDB",
+      "data_publicacao": {
+        "$date": "2024-05-10T00:00:00.000Z"
+      },
+      "publico_alvo": {
+        "idade": 29,
+        "sexo": "M"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68b274728b1929e44aa4539b"
+  },
+  "nome": "Helena Costa",
+  "hash_senha": "6512bd43d9caa6e02c990b0a82652dca",
+  "nome_perfil": "moderador",
+  "telefone": [
+    "+55 19 91234-4444"
+  ],
+  "conteudo": [
+    {
+      "titulo": "Psicologia Organizacional",
+      "link": "https://example.com/psico",
+      "descricao": "Teorias sobre comportamento em empresas",
+      "data_publicacao": {
+        "$date": "2024-05-10T00:00:00.000Z"
+      },
+      "publico_alvo": {
+        "sexo": "F"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68b274728b1929e44aa4539c"
+  },
+  "nome": "Igor Martins",
+  "hash_senha": "e10adc3949ba59abbe56e057f20f883e",
+  "nome_perfil": "leitor",
+  "conteudo": [
+    {
+      "titulo": "Linux Essentials",
+      "link": "https://example.com/linux",
+      "descricao": "Comandos básicos do Linux",
+      "data_publicacao": {
+        "$date": "2024-05-10T00:00:00.000Z"
+      },
+      "publico_alvo": {
+        "idade": 21,
+        "sexo": "M"
+      }
+    },
+    {
+      "titulo": "Bash Avançado",
+      "link": "https://example.com/bash",
+      "descricao": "Scripts e automação",
+      "data_publicacao": {
+        "$date": "2024-05-10T00:00:00.000Z"
+      },
+      "publico_alvo": {}
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68b274728b1929e44aa4539d"
+  },
+  "nome": "Juliana Mendes",
+  "hash_senha": "21232f297a57a5a743894a0e4a801fc3",
+  "nome_perfil": "editor",
+  "email": "juliana.m@example.com",
+  "conteudo": [
+    {
+      "titulo": "Machine Learning",
+      "link": "https://example.com/ml",
+      "descricao": "Introdução a modelos supervisionados",
+      "data_publicacao": {
+        "$date": "2024-05-10T00:00:00.000Z"
+      },
+      "publico_alvo": {
+        "idade": 26,
+        "sexo": "F"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68b274728b1929e44aa4539e"
+  },
+  "nome": "Kauan Rocha",
+  "hash_senha": "098f6bcd4621d373cade4e832627b4f6",
+  "nome_perfil": "autor",
+  "conteudo": [
+    {
+      "titulo": "Desenvolvimento Mobile",
+      "link": "https://example.com/mobile",
+      "descricao": "Criando apps com Flutter",
+      "data_publicacao": {
+        "$date": "2024-05-10T00:00:00.000Z"
+      },
+      "publico_alvo": {}
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68b274728b1929e44aa4539f"
+  },
+  "nome": "Larissa Freitas",
+  "hash_senha": "900150983cd24fb0d6963f7d28e17f72",
+  "nome_perfil": "moderador",
+  "telefone": [
+    "+55 81 92222-7777"
+  ],
+  "conteudo": [
+    {
+      "titulo": "Análise de Dados",
+      "link": "https://example.com/data",
+      "descricao": "Introdução a Python e Pandas",
+      "data_publicacao": {
+        "$date": "2024-05-10T00:00:00.000Z"
+      },
+      "publico_alvo": {
+        "idade": 27
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68b274728b1929e44aa453a0"
+  },
+  "nome": "Matheus Barbosa",
+  "hash_senha": "827ccb0eea8a706c4c34a16891f84e7b",
+  "nome_perfil": "leitor",
+  "conteudo": [
+    {
+      "titulo": "História da Computação",
+      "link": "https://example.com/historia",
+      "descricao": "Evolução da computação ao longo do século XX",
+      "data_publicacao": {
+        "$date": "2024-05-10T00:00:00.000Z"
+      },
+      "publico_alvo": {
+        "idade": 19,
+        "sexo": "M"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68b274728b1929e44aa453a1"
+  },
+  "nome": "Natália Ribeiro",
+  "hash_senha": "d8578edf8458ce06fbc5bb76a58c5ca4",
+  "nome_perfil": "editor",
+  "email": "natalia.r@example.com",
+  "telefone": [
+    "+55 62 95555-9999"
+  ],
+  "conteudo": [
+    {
+      "titulo": "Big Data",
+      "link": "https://example.com/bigdata",
+      "descricao": "Processamento de grandes volumes de dados",
+      "data_publicacao": {
+        "$date": "2024-05-10T00:00:00.000Z"
+      },
+      "publico_alvo": {
+        "idade": 34,
+        "sexo": "F"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68b274728b1929e44aa453a2"
+  },
+  "nome": "Otávio Nunes",
+  "hash_senha": "25d55ad283aa400af464c76d713c07ad",
+  "nome_perfil": "autor",
+  "conteudo": [
+    {
+      "titulo": "Ciência de Redes",
+      "link": "https://example.com/redes2",
+      "descricao": "Análise de grafos e redes complexas",
+      "data_publicacao": {
+        "$date": "2024-05-10T00:00:00.000Z"
+      },
+      "publico_alvo": {}
+    },
+    {
+      "titulo": "Visualização de Dados",
+      "link": "https://example.com/viz",
+      "descricao": "Dashboards interativos",
+      "data_publicacao": {
+        "$date": "2024-05-10T00:00:00.000Z"
+      },
+      "publico_alvo": {
+        "idade": 31
+      }
+    }
+  ]
+}]
