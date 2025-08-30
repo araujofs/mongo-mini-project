@@ -1,8 +1,42 @@
+db.tag.insertMany([
+  {
+    "nome": "banco de dados"
+  },
+  {
+    "nome": "ti"
+  },
+  {
+    "nome": "matemática"
+  },
+  {
+    "nome": "ti"
+  },
+  {
+    "nome": "redes"
+  },
+  {
+    "nome": "soft skills"
+  },
+  {
+    "nome": "design"
+  },
+  {
+    "nome": "ia"
+  }
+])
+
+tagsArray = db.tag.find().toArray()
+tagsObj = {}
+
+tagsArray.forEach(tag => {
+  tagsObj[tag.nome] = tag._id
+})
+
 db.usuario.insertMany([
   {
     "nome": "Arthur Silva",
     "hash_senha": "a94a8fe5ccb19ba61c4c0873d391e987982fbbd3",
-    "nome_perfil": "admin",
+    "nome_perfil": "asilva",
     "email": "arthur.silva@example.com",
     "telefone": ["+55 83 98877-1234"],
     "conteudo": [
@@ -11,14 +45,15 @@ db.usuario.insertMany([
         "link": "https://example.com/mongodb",
         "descricao": "Introdução ao MongoDB",
         "data_publicacao": new Date("2024-05-10T00:00:00Z"),
-        "publico_alvo": { "idade": 18, "sexo": "M" }
+        "publico_alvo": { "idade": 18, "sexo": "M" },
+        "tag": [tagsObj["banco de dados"], tagsObj["ti"],]
       }
     ]
   },
   {
     "nome": "Beatriz Souza",
     "hash_senha": "5d41402abc4b2a76b9719d911017c592",
-    "nome_perfil": "editor",
+    "nome_perfil": "beasou",
     "email": "bia.souza@example.com",
     "telefone": ["+55 11 91234-5678"],
     "conteudo": [
@@ -41,7 +76,7 @@ db.usuario.insertMany([
   {
     "nome": "Carlos Almeida",
     "hash_senha": "098f6bcd4621d373cade4e832627b4f6",
-    "nome_perfil": "autor",
+    "nome_perfil": "calmd",
     "telefone": ["+55 21 97777-2222", "+55 21 93333-1111"],
     "conteudo": [
       {
@@ -56,7 +91,7 @@ db.usuario.insertMany([
   {
     "nome": "Daniela Castro",
     "hash_senha": "ad0234829205b9033196ba818f7a872b",
-    "nome_perfil": "moderador",
+    "nome_perfil": "castrodan",
     "email": "daniela.castro@example.com",
     "conteudo": [
       {
@@ -71,7 +106,7 @@ db.usuario.insertMany([
   {
     "nome": "Eduardo Pereira",
     "hash_senha": "8ad8757baa8564dc136c1e07507f4a98",
-    "nome_perfil": "leitor",
+    "nome_perfil": "eduper",
     "telefone": ["+55 61 95555-4444", "+55 61 97777-8888"],
     "conteudo": [
       {
@@ -86,7 +121,7 @@ db.usuario.insertMany([
   {
     "nome": "Fernanda Lima",
     "hash_senha": "c4ca4238a0b923820dcc509a6f75849b",
-    "nome_perfil": "editor",
+    "nome_perfil": "limafe",
     "email": "fernanda.lima@example.com",
     "conteudo": [
       {
@@ -108,7 +143,7 @@ db.usuario.insertMany([
   {
     "nome": "Gabriel Oliveira",
     "hash_senha": "45c48cce2e2d7fbdea1afc51c7c6ad26",
-    "nome_perfil": "autor",
+    "nome_perfil": "gabira",
     "conteudo": [
       {
         "titulo": "Node.js Avançado",
@@ -122,7 +157,7 @@ db.usuario.insertMany([
   {
     "nome": "Helena Costa",
     "hash_senha": "6512bd43d9caa6e02c990b0a82652dca",
-    "nome_perfil": "moderador",
+    "nome_perfil": "helback",
     "telefone": ["+55 19 91234-4444"],
     "conteudo": [
       {
@@ -137,7 +172,7 @@ db.usuario.insertMany([
   {
     "nome": "Igor Martins",
     "hash_senha": "e10adc3949ba59abbe56e057f20f883e",
-    "nome_perfil": "leitor",
+    "nome_perfil": "igaoma",
     "conteudo": [
       {
         "titulo": "Linux Essentials",
@@ -158,7 +193,7 @@ db.usuario.insertMany([
   {
     "nome": "Juliana Mendes",
     "hash_senha": "21232f297a57a5a743894a0e4a801fc3",
-    "nome_perfil": "editor",
+    "nome_perfil": "jujumen",
     "email": "juliana.m@example.com",
     "conteudo": [
       {
@@ -173,7 +208,7 @@ db.usuario.insertMany([
   {
     "nome": "Kauan Rocha",
     "hash_senha": "098f6bcd4621d373cade4e832627b4f6",
-    "nome_perfil": "autor",
+    "nome_perfil": "kauanrock",
     "conteudo": [
       {
         "titulo": "Desenvolvimento Mobile",
@@ -187,7 +222,7 @@ db.usuario.insertMany([
   {
     "nome": "Larissa Freitas",
     "hash_senha": "900150983cd24fb0d6963f7d28e17f72",
-    "nome_perfil": "moderador",
+    "nome_perfil": "lalafrei",
     "telefone": ["+55 81 92222-7777"],
     "conteudo": [
       {
@@ -202,7 +237,7 @@ db.usuario.insertMany([
   {
     "nome": "Matheus Barbosa",
     "hash_senha": "827ccb0eea8a706c4c34a16891f84e7b",
-    "nome_perfil": "leitor",
+    "nome_perfil": "barbsmatheus",
     "conteudo": [
       {
         "titulo": "História da Computação",
@@ -216,7 +251,7 @@ db.usuario.insertMany([
   {
     "nome": "Natália Ribeiro",
     "hash_senha": "d8578edf8458ce06fbc5bb76a58c5ca4",
-    "nome_perfil": "editor",
+    "nome_perfil": "natlalia",
     "email": "natalia.r@example.com",
     "telefone": ["+55 62 95555-9999"],
     "conteudo": [
@@ -232,7 +267,7 @@ db.usuario.insertMany([
   {
     "nome": "Otávio Nunes",
     "hash_senha": "25d55ad283aa400af464c76d713c07ad",
-    "nome_perfil": "autor",
+    "nome_perfil": "otanunes",
     "conteudo": [
       {
         "titulo": "Ciência de Redes",
