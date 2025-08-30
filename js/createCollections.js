@@ -58,6 +58,13 @@ db.createCollection("usuario", {
                     enum: ["M", "F"]
                   }
                 }
+              },
+              tag: {
+                bsonType: "array",
+                items: {
+                  bsonType: "objectId"
+                },
+                uniqueItems: true
               }
             }
           }
@@ -67,3 +74,19 @@ db.createCollection("usuario", {
   }
 });
 
+db.createCollection("tag", {
+  validator: {
+  $jsonSchema: {
+    bsonType: 'object',
+    required: [
+      'nome'
+    ],
+    properties: {
+      nome: {
+        bsonType: 'string',
+        minLength: 2
+      }
+    }
+  }
+}
+})
