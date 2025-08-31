@@ -1,27 +1,27 @@
 db.tag.insertMany([
   {
-    "nome": "banco de dados"
+    nome: 'banco de dados'
   },
   {
-    "nome": "ti"
+    nome: 'ti'
   },
   {
-    "nome": "matemática"
+    nome: 'matemática'
   },
   {
-    "nome": "ti"
+    nome: 'desenvolvimento'
   },
   {
-    "nome": "redes"
+    nome: 'redes'
   },
   {
-    "nome": "soft skills"
+    nome: 'soft skills'
   },
   {
-    "nome": "design"
+    nome: 'design'
   },
   {
-    "nome": "ia"
+    nome: 'ia'
   }
 ])
 
@@ -34,256 +34,264 @@ tagsArray.forEach(tag => {
 
 db.usuario.insertMany([
   {
-    "nome": "Arthur Silva",
-    "hash_senha": "a94a8fe5ccb19ba61c4c0873d391e987982fbbd3",
-    "nome_perfil": "asilva",
-    "email": "arthur.silva@example.com",
-    "telefone": ["+55 83 98877-1234"],
-    "conteudo": [
+    nome: 'Arthur Silva',
+    hash_senha: 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3',
+    nome_perfil: 'asilva',
+    email: 'arthur.silva@example.com',
+    telefone: ['+55 83 98877-1234'],
+    conteudo: [
       {
-        "titulo": "MongoDB Basics",
-        "link": "https://example.com/mongodb",
-        "descricao": "Introdução ao MongoDB",
-        "data_publicacao": new Date("2024-05-10T00:00:00Z"),
-        "publico_alvo": { "idade": 18, "sexo": "M" },
-        "tag": [tagsObj["banco de dados"], tagsObj["ti"],]
+        titulo: 'MongoDB Basics',
+        link: 'https://example.com/mongodb',
+        descricao: 'Introdução ao MongoDB',
+        data_publicacao: new Date('2024-05-10T00:00:00Z'),
+        publico_alvo: { idade: 18, sexo: 'M' },
+        tag: [tagsObj['banco de dados'], tagsObj['ti']]
       }
     ]
   },
   {
-    "nome": "Beatriz Souza",
-    "hash_senha": "5d41402abc4b2a76b9719d911017c592",
-    "nome_perfil": "beasou",
-    "email": "bia.souza@example.com",
-    "telefone": ["+55 11 91234-5678"],
-    "conteudo": [
+    nome: 'Beatriz Souza',
+    hash_senha: '5d41402abc4b2a76b9719d911017c592',
+    nome_perfil: 'beasou',
+    email: 'bia.souza@example.com',
+    telefone: ['+55 11 91234-5678'],
+    conteudo: [
       {
-        "titulo": "UX Design",
-        "link": "https://example.com/ux",
-        "descricao": "Noções básicas de UX",
-        "data_publicacao": new Date("2024-05-10T00:00:00Z"),
-        "publico_alvo": { "sexo": "F" }
+        titulo: 'UX Design',
+        link: 'https://example.com/ux',
+        descricao: 'Noções básicas de UX',
+        data_publicacao: new Date('2024-05-10T00:00:00Z'),
+        publico_alvo: { sexo: 'F' },
+        tag: [tagsObj['design']]
       },
       {
-        "titulo": "Design Patterns",
-        "link": "https://example.com/patterns",
-        "descricao": "Padrões de projeto em UI",
-        "data_publicacao": new Date("2024-05-10T00:00:00Z"),
-        "publico_alvo": { "idade": 30 }
+        titulo: 'Design Patterns',
+        link: 'https://example.com/patterns',
+        descricao: 'Padrões de projeto em UI',
+        data_publicacao: new Date('2024-05-10T00:00:00Z'),
+        publico_alvo: { idade: 30 },
+        tag: [tagsObj['design'], tagsObj['desenvolvimento'], tagsObj['ti']]
       }
     ]
   },
   {
-    "nome": "Carlos Almeida",
-    "hash_senha": "098f6bcd4621d373cade4e832627b4f6",
-    "nome_perfil": "calmd",
-    "telefone": ["+55 21 97777-2222", "+55 21 93333-1111"],
-    "conteudo": [
+    nome: 'Carlos Almeida',
+    hash_senha: '098f6bcd4621d373cade4e832627b4f6',
+    nome_perfil: 'calmd',
+    telefone: ['+55 21 97777-2222', '+55 21 93333-1111'],
+    conteudo: [
       {
-        "titulo": "Estatística Básica",
-        "link": "https://example.com/estatistica",
-        "descricao": "Probabilidade e estatística para iniciantes",
-        "data_publicacao": new Date("2024-05-10T00:00:00Z"),
-        "publico_alvo": { "idade": 25, "sexo": "M" }
+        titulo: 'Estatística Básica',
+        link: 'https://example.com/estatistica',
+        descricao: 'Probabilidade e estatística para iniciantes',
+        data_publicacao: new Date('2024-05-10T00:00:00Z'),
+        publico_alvo: { idade: 25, sexo: 'M' },
+        tag: [tagsObj['matemática']]
       }
     ]
   },
   {
-    "nome": "Daniela Castro",
-    "hash_senha": "ad0234829205b9033196ba818f7a872b",
-    "nome_perfil": "castrodan",
-    "email": "daniela.castro@example.com",
-    "conteudo": [
+    nome: 'Daniela Castro',
+    hash_senha: 'ad0234829205b9033196ba818f7a872b',
+    nome_perfil: 'castrodan',
+    email: 'daniela.castro@example.com',
+    conteudo: [
       {
-        "titulo": "Redes de Computadores",
-        "link": "https://example.com/redes",
-        "descricao": "Modelos OSI e TCP/IP",
-        "data_publicacao": new Date("2024-05-10T00:00:00Z"),
-        "publico_alvo": { "idade": 20 }
+        titulo: 'Redes de Computadores',
+        link: 'https://example.com/redes',
+        descricao: 'Modelos OSI e TCP/IP',
+        data_publicacao: new Date('2024-05-10T00:00:00Z'),
+        publico_alvo: { idade: 20 },
+        tag: [tagsObj['redes']]
       }
     ]
   },
   {
-    "nome": "Eduardo Pereira",
-    "hash_senha": "8ad8757baa8564dc136c1e07507f4a98",
-    "nome_perfil": "eduper",
-    "telefone": ["+55 61 95555-4444", "+55 61 97777-8888"],
-    "conteudo": [
+    nome: 'Eduardo Pereira',
+    hash_senha: '8ad8757baa8564dc136c1e07507f4a98',
+    nome_perfil: 'eduper',
+    telefone: ['+55 61 95555-4444', '+55 61 97777-8888'],
+    conteudo: [
       {
-        "titulo": "Docker Essentials",
-        "link": "https://example.com/docker",
-        "descricao": "Introdução a containers",
-        "data_publicacao": new Date("2024-05-10T00:00:00Z"),
-        "publico_alvo": { "sexo": "M" }
+        titulo: 'Docker Essentials',
+        link: 'https://example.com/docker',
+        descricao: 'Introdução a containers',
+        data_publicacao: new Date('2024-05-10T00:00:00Z'),
+        publico_alvo: { sexo: 'M' }
       }
     ]
   },
   {
-    "nome": "Fernanda Lima",
-    "hash_senha": "c4ca4238a0b923820dcc509a6f75849b",
-    "nome_perfil": "limafe",
-    "email": "fernanda.lima@example.com",
-    "conteudo": [
+    nome: 'Fernanda Lima',
+    hash_senha: 'c4ca4238a0b923820dcc509a6f75849b',
+    nome_perfil: 'limafe',
+    email: 'fernanda.lima@example.com',
+    conteudo: [
       {
-        "titulo": "Marketing Digital",
-        "link": "https://example.com/marketing",
-        "descricao": "Conceitos de SEO e SEM",
-        "data_publicacao": new Date("2024-05-10T00:00:00Z"),
-        "publico_alvo": { "idade": 35, "sexo": "F" }
+        titulo: 'Marketing Digital',
+        link: 'https://example.com/marketing',
+        descricao: 'Conceitos de SEO e SEM',
+        data_publicacao: new Date('2024-05-10T00:00:00Z'),
+        publico_alvo: { idade: 35, sexo: 'F' }
       },
       {
-        "titulo": "Redação Publicitária",
-        "link": "https://example.com/redacao",
-        "descricao": "Escrevendo para campanhas online",
-        "data_publicacao": new Date("2024-05-10T00:00:00Z"),
-        "publico_alvo": {}
+        titulo: 'Redação Publicitária',
+        link: 'https://example.com/redacao',
+        descricao: 'Escrevendo para campanhas online',
+        data_publicacao: new Date('2024-05-10T00:00:00Z'),
+        publico_alvo: {}
       }
     ]
   },
   {
-    "nome": "Gabriel Oliveira",
-    "hash_senha": "45c48cce2e2d7fbdea1afc51c7c6ad26",
-    "nome_perfil": "gabira",
-    "conteudo": [
+    nome: 'Gabriel Oliveira',
+    hash_senha: '45c48cce2e2d7fbdea1afc51c7c6ad26',
+    nome_perfil: 'gabira',
+    conteudo: [
       {
-        "titulo": "Node.js Avançado",
-        "link": "https://example.com/node",
-        "descricao": "Backend com Express e MongoDB",
-        "data_publicacao": new Date("2024-05-10T00:00:00Z"),
-        "publico_alvo": { "idade": 29, "sexo": "M" }
+        titulo: 'Node.js Avançado',
+        link: 'https://example.com/node',
+        descricao: 'Backend com Express e MongoDB',
+        data_publicacao: new Date('2024-05-10T00:00:00Z'),
+        publico_alvo: { idade: 29, sexo: 'M' },
+        tag: [tagsObj['banco de dados'], tagsObj['desenvolvimento']]
       }
     ]
   },
   {
-    "nome": "Helena Costa",
-    "hash_senha": "6512bd43d9caa6e02c990b0a82652dca",
-    "nome_perfil": "helback",
-    "telefone": ["+55 19 91234-4444"],
-    "conteudo": [
+    nome: 'Helena Costa',
+    hash_senha: '6512bd43d9caa6e02c990b0a82652dca',
+    nome_perfil: 'helback',
+    telefone: ['+55 19 91234-4444'],
+    conteudo: [
       {
-        "titulo": "Psicologia Organizacional",
-        "link": "https://example.com/psico",
-        "descricao": "Teorias sobre comportamento em empresas",
-        "data_publicacao": new Date("2024-05-10T00:00:00Z"),
-        "publico_alvo": { "sexo": "F" }
+        titulo: 'Psicologia Organizacional',
+        link: 'https://example.com/psico',
+        descricao: 'Teorias sobre comportamento em empresas',
+        data_publicacao: new Date('2024-05-10T00:00:00Z'),
+        publico_alvo: { sexo: 'F' },
+        tag: [tagsObj['soft skills']]
       }
     ]
   },
   {
-    "nome": "Igor Martins",
-    "hash_senha": "e10adc3949ba59abbe56e057f20f883e",
-    "nome_perfil": "igaoma",
-    "conteudo": [
+    nome: 'Igor Martins',
+    hash_senha: 'e10adc3949ba59abbe56e057f20f883e',
+    nome_perfil: 'igaoma',
+    conteudo: [
       {
-        "titulo": "Linux Essentials",
-        "link": "https://example.com/linux",
-        "descricao": "Comandos básicos do Linux",
-        "data_publicacao": new Date("2024-05-10T00:00:00Z"),
-        "publico_alvo": { "idade": 21, "sexo": "M" }
+        titulo: 'Linux Essentials',
+        link: 'https://example.com/linux',
+        descricao: 'Comandos básicos do Linux',
+        data_publicacao: new Date('2024-05-10T00:00:00Z'),
+        publico_alvo: { idade: 21, sexo: 'M' },
+        tag: [tagsObj['ti']]
       },
       {
-        "titulo": "Bash Avançado",
-        "link": "https://example.com/bash",
-        "descricao": "Scripts e automação",
-        "data_publicacao": new Date("2024-05-10T00:00:00Z"),
-        "publico_alvo": {}
+        titulo: 'Bash Avançado',
+        link: 'https://example.com/bash',
+        descricao: 'Scripts e automação',
+        data_publicacao: new Date('2024-05-10T00:00:00Z'),
+        tag: [tagsObj['ti']]
       }
     ]
   },
   {
-    "nome": "Juliana Mendes",
-    "hash_senha": "21232f297a57a5a743894a0e4a801fc3",
-    "nome_perfil": "jujumen",
-    "email": "juliana.m@example.com",
-    "conteudo": [
+    nome: 'Juliana Mendes',
+    hash_senha: '21232f297a57a5a743894a0e4a801fc3',
+    nome_perfil: 'jujumen',
+    email: 'juliana.m@example.com',
+    conteudo: [
       {
-        "titulo": "Machine Learning",
-        "link": "https://example.com/ml",
-        "descricao": "Introdução a modelos supervisionados",
-        "data_publicacao": new Date("2024-05-10T00:00:00Z"),
-        "publico_alvo": { "idade": 26, "sexo": "F" }
+        titulo: 'Machine Learning',
+        link: 'https://example.com/ml',
+        descricao: 'Introdução a modelos supervisionados',
+        data_publicacao: new Date('2024-05-10T00:00:00Z'),
+        publico_alvo: { idade: 26, sexo: 'F' },
+        tag: [tagsObj['ia']]
       }
     ]
   },
   {
-    "nome": "Kauan Rocha",
-    "hash_senha": "098f6bcd4621d373cade4e832627b4f6",
-    "nome_perfil": "kauanrock",
-    "conteudo": [
+    nome: 'Kauan Rocha',
+    hash_senha: '098f6bcd4621d373cade4e832627b4f6',
+    nome_perfil: 'kauanrock',
+    conteudo: [
       {
-        "titulo": "Desenvolvimento Mobile",
-        "link": "https://example.com/mobile",
-        "descricao": "Criando apps com Flutter",
-        "data_publicacao": new Date("2024-05-10T00:00:00Z"),
-        "publico_alvo": {}
+        titulo: 'Desenvolvimento Mobile',
+        link: 'https://example.com/mobile',
+        descricao: 'Criando apps com Flutter',
+        data_publicacao: new Date('2024-05-10T00:00:00Z'),
+        tag: [tagsObj['desenvolvimento']]
       }
     ]
   },
   {
-    "nome": "Larissa Freitas",
-    "hash_senha": "900150983cd24fb0d6963f7d28e17f72",
-    "nome_perfil": "lalafrei",
-    "telefone": ["+55 81 92222-7777"],
-    "conteudo": [
+    nome: 'Larissa Freitas',
+    hash_senha: '900150983cd24fb0d6963f7d28e17f72',
+    nome_perfil: 'lalafrei',
+    telefone: ['+55 81 92222-7777'],
+    conteudo: [
       {
-        "titulo": "Análise de Dados",
-        "link": "https://example.com/data",
-        "descricao": "Introdução a Python e Pandas",
-        "data_publicacao": new Date("2024-05-10T00:00:00Z"),
-        "publico_alvo": { "idade": 27 }
+        titulo: 'Análise de Dados',
+        link: 'https://example.com/data',
+        descricao: 'Introdução a Python e Pandas',
+        data_publicacao: new Date('2024-05-10T00:00:00Z'),
+        publico_alvo: { idade: 27 }
       }
     ]
   },
   {
-    "nome": "Matheus Barbosa",
-    "hash_senha": "827ccb0eea8a706c4c34a16891f84e7b",
-    "nome_perfil": "barbsmatheus",
-    "conteudo": [
+    nome: 'Matheus Barbosa',
+    hash_senha: '827ccb0eea8a706c4c34a16891f84e7b',
+    nome_perfil: 'barbsmatheus',
+    conteudo: [
       {
-        "titulo": "História da Computação",
-        "link": "https://example.com/historia",
-        "descricao": "Evolução da computação ao longo do século XX",
-        "data_publicacao": new Date("2024-05-10T00:00:00Z"),
-        "publico_alvo": { "idade": 19, "sexo": "M" }
+        titulo: 'História da Computação',
+        link: 'https://example.com/historia',
+        descricao: 'Evolução da computação ao longo do século XX',
+        data_publicacao: new Date('2024-05-10T00:00:00Z'),
+        publico_alvo: { idade: 19, sexo: 'M' },
+        tag: [tagsObj['ti']]
       }
     ]
   },
   {
-    "nome": "Natália Ribeiro",
-    "hash_senha": "d8578edf8458ce06fbc5bb76a58c5ca4",
-    "nome_perfil": "natlalia",
-    "email": "natalia.r@example.com",
-    "telefone": ["+55 62 95555-9999"],
-    "conteudo": [
+    nome: 'Natália Ribeiro',
+    hash_senha: 'd8578edf8458ce06fbc5bb76a58c5ca4',
+    nome_perfil: 'natlalia',
+    email: 'natalia.r@example.com',
+    telefone: ['+55 62 95555-9999'],
+    conteudo: [
       {
-        "titulo": "Big Data",
-        "link": "https://example.com/bigdata",
-        "descricao": "Processamento de grandes volumes de dados",
-        "data_publicacao": new Date("2024-05-10T00:00:00Z"),
-        "publico_alvo": { "idade": 34, "sexo": "F" }
+        titulo: 'Big Data',
+        link: 'https://example.com/bigdata',
+        descricao: 'Processamento de grandes volumes de dados',
+        data_publicacao: new Date('2024-05-10T00:00:00Z'),
+        publico_alvo: { idade: 34, sexo: 'F' }
       }
     ]
   },
   {
-    "nome": "Otávio Nunes",
-    "hash_senha": "25d55ad283aa400af464c76d713c07ad",
-    "nome_perfil": "otanunes",
-    "conteudo": [
+    nome: 'Otávio Nunes',
+    hash_senha: '25d55ad283aa400af464c76d713c07ad',
+    nome_perfil: 'otanunes',
+    conteudo: [
       {
-        "titulo": "Ciência de Redes",
-        "link": "https://example.com/redes2",
-        "descricao": "Análise de grafos e redes complexas",
-        "data_publicacao": new Date("2024-05-10T00:00:00Z"),
-        "publico_alvo": {}
+        titulo: 'Ciência de Redes',
+        link: 'https://example.com/redes2',
+        descricao: 'Análise de grafos e redes complexas',
+        data_publicacao: new Date('2024-05-10T00:00:00Z'),
+        tag: [tagsObj['redes']]
       },
       {
-        "titulo": "Visualização de Dados",
-        "link": "https://example.com/viz",
-        "descricao": "Dashboards interativos",
-        "data_publicacao": new Date("2024-05-10T00:00:00Z"),
-        "publico_alvo": { "idade": 31 }
+        titulo: 'Visualização de Dados',
+        link: 'https://example.com/viz',
+        descricao: 'Dashboards interativos',
+        data_publicacao: new Date('2024-05-10T00:00:00Z'),
+        publico_alvo: { idade: 31 }
       }
     ]
   }
-]
-)
+])
