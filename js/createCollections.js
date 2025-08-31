@@ -89,3 +89,7 @@ db.createCollection("tag", {
   }
 }
 })
+
+db.usuario.createIndex({ email: 1 }, { unique: true, partialFilterExpression: { email: { $exists: true, $type: "string" } } })
+
+db.usuario.createIndex({nome_perfil: 1}, {unique: true})
