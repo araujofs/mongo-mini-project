@@ -295,3 +295,6 @@ db.usuario.insertMany([
     ]
   }
 ])
+
+"mongosh --quiet --eval 'JSON.stringify(db.usuario.find().toArray())' > usuarios.json"
+"mongosh --quiet --eval 'JSON.stringify(db.tag.find().toArray())' > tags.json"
