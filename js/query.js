@@ -1,74 +1,85 @@
 // REQUISITO: CONSULTAS COM FILTROS DIVERSOS SEM PROJEÇÃO
 
 // 1.1. Usando operador $regex
-// Encontrar usuários com telefone do DDD 83
+// Encontrar usuários com nome começando por G
 db.usuario.find({
-  telefone: { $regex: "\\+55 83" }
+  nome: /^G/
 })
 
 // 1.2. Usando operador $gt
-// Encontrar usuários que publicaram conteúdo para público-alvo com idade maior que 25
+// Encontrar usuários que publicaram conteúdo para público-alvo com idade menor que 25
 db.usuario.find({
-  "conteudo.publico_alvo.idade": { $gt: 25 }
+  "conteudo.publico_alvo.idade": { $lt: 25 }
 })
 
 
 
 // REQUISITO: CONSULTAS COM FILTROS DIVERSOS E COM PROJEÇÃO
 
-// 2.1. Filtrando usuários com telefone cadastrado
+// 2.1. Filtrando usuários com pelo menos um telefone cadastrado
 db.usuario.find(
   { telefone: { $exists: true, $ne: [] } },
-  { nome: 1, email: 1, _id: 0 }
+  { nome: 1, telefone: 1, _id: 0 }
 )
 
 // 2.2. Filtrando usuários com conteúdo para público feminino
 db.usuario.find(
   { "conteudo.publico_alvo.sexo": "F" },
-  { nome: 1, "conteudo.titulo": 1, _id: 0 }
+  { nome: 1, conteudo: { $elemMatch: { "publico_alvo.sexo": "F" } }, _id: 0 }
 )
 
 
 
 // REQUISITO: CONSULTA COM APENAS PROJEÇÃO (SEM FILTRO) =====
 
-// Listar todos os usuários mostrando apenas nome e nome de perfil
+// Listar todos os usuários mostrando apenas nome, nome de perfil e titulos de seus conteúdos
 db.usuario.find(
   {},
-  { nome: 1, nome_perfil: 1, _id: 0 }
+  { nome: 1, nome_perfil: 1, conteudo: {titulo: 1}, _id: 0 }
 )
 
 
 
 // REQUISITO: CONSULTA COM ACESSO A ELEMENTO DE ARRAY =====
 
-// Encontrar usuários que têm mais de um número de telefone
+// Encontrar usuários que têm o primeiro número com DDD de Pernambuco
 db.usuario.find({
-  $expr: { $gt: [{ $size: { $ifNull: ["$telefone", []] } }, 1] }
-})
+  "telefone.0": /^\+55 81 / 
+}, {nome: 1, telefone: 1, _id: 0})
 
 
 
 // REQUISITO: CONSULTA COM ACESSO A ESTRUTURA/OBJETO EMBUTIDO =====
 
-// Encontrar usuários com conteúdo destinado ao público masculino de idade específica
+// Encontrar usuários com conteúdo destinado ao público masculino de idade maior que 20
 db.usuario.find({
   "conteudo": {
     $elemMatch: {
       "publico_alvo.sexo": "M",
-      "publico_alvo.idade": { $exists: true }
+      "publico_alvo.idade": { $gt: 20 }
     }
   }
-})
+},
+  {
+    nome: 1,
+    conteudo: {
+      $elemMatch: {
+        "publico_alvo.sexo": "M",
+        "publico_alvo.idade": { $gt: 20 }
+      }
+    },
+    _id: 0
+  }
+)
 
 
 
 // REQUISITO: CONSULTA COM SORT, LIMIT, FILTROS E PROJEÇÕES
 
-// Listar os 5 primeiros usuários que possuem email, ordenados por nome
+// Listar os 5 primeiros usuários que possuem algum conteudo ordenados por nome
 db.usuario.find(
-  { email: { $exists: true } },
-  { nome: 1, email: 1, nome_perfil: 1, _id: 0 }
+  { conteudo: { $exists: true, $ne: [] } },
+  { nome: 1, nome_perfil: 1, conteudo: {titulo: 1}, _id: 0 }
 ).sort({ nome: 1 }).limit(5)
 
 
@@ -88,10 +99,26 @@ db.usuario.aggregate([
     }
   },
   {
+    $group: {
+      _id: {
+        autor: "$nome",
+        titulo: "$conteudo.titulo"
+      },
+      tags: { $addToSet: "$tag_info.nome" }
+    }
+  },
+  {
     $project: {
-      autor: "$nome",
-      titulo: "$conteudo.titulo",
-      tag_nome: { $arrayElemAt: ["$tag_info.nome", 0] }
+      autor: "$_id.autor",
+      titulo: "$_id.titulo",
+      tag_nomes: {
+        $reduce: {
+          input: "$tags",
+          initialValue: [],
+          in: { $concatArrays: ["$$value", "$$this"] }
+        }
+      },
+      _id: 0
     }
   }
 ])
