@@ -396,6 +396,11 @@ db.usuario.insertMany([
 ]);
 
 
+// Comando para exportar os conjuntos
+// mongosh --quiet --eval 'JSON.stringify(db.usuario.find().toArray())' > usuarios.json
+// mongosh --quiet --eval 'JSON.stringify(db.tag.find().toArray())' > tags.json
+
+
 // ========== REQUISITO: CONSULTAS COM FILTROS DIVERSOS SEM PROJEÇÃO ==========
 
 console.log("\n1.1. Usuários com nome começando por G:");

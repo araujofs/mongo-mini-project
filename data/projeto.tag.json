@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "68b396f495ae15b388cc4a64"
+  },
+  "nome": "banco de dados"
+},
+{
+  "_id": {
+    "$oid": "68b396f495ae15b388cc4a65"
+  },
+  "nome": "ti"
+},
+{
+  "_id": {
+    "$oid": "68b396f495ae15b388cc4a66"
+  },
+  "nome": "matemática"
+},
+{
+  "_id": {
+    "$oid": "68b396f495ae15b388cc4a67"
+  },
+  "nome": "desenvolvimento"
+},
+{
+  "_id": {
+    "$oid": "68b396f495ae15b388cc4a68"
+  },
+  "nome": "redes"
+},
+{
+  "_id": {
+    "$oid": "68b396f495ae15b388cc4a69"
+  },
+  "nome": "soft skills"
+},
+{
+  "_id": {
+    "$oid": "68b396f495ae15b388cc4a6a"
+  },
+  "nome": "design"
+},
+{
+  "_id": {
+    "$oid": "68b396f495ae15b388cc4a6b"
+  },
+  "nome": "ia"
+}]
